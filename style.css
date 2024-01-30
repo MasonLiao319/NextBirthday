@@ -103,3 +103,44 @@ form {
 .c-firework::after {
  transform: translate(-50%, -50%) rotate(-37deg) !important;
 } 
+
+
+
+@media screen and (max-width: 480px) {
+
+    /* body */
+    body {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+  
+    #output {
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: #ccc;
+        display: flex;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+    }
