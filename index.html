@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Next Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Countdown to your next birthday calculator</h1>
+    
+    <!-- Create a form element for the user input -->
+    <form id="form" onsubmit="return submitForm()">
+       
+        <input id="name" class="input" type="text" placeholder="What's your name?" required>
+        
+        <input id="birthday" class="input" type="date" placeholder="What's your birthday?" required>
+        
+        <button id="submit" class="submit" type="submit">OK</button>
+    </form>
+
+    <!-- Output div -->
+    <div id="output"></div>
+
+    <!-- Firework animation -->
+    <div id="firework" class="c-firework"></div>
+
+    <script src="miniFnAge.js"></script>
+    
+</body>
+</html>

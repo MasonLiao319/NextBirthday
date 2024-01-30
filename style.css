@@ -1,0 +1,105 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Center elements vertically */
+    height: 100vh;
+    background-color: #292626;
+    overflow-y: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #eae9e9;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Add some space between form and output */
+}
+
+.input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.submit {
+    padding: 10px 20px;
+    background-color: #2c86e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: #105aa8;
+}
+
+#output {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+#firework {
+    display: none; /* Hide by default */
+}
+
+@keyframes fireworks-animation {
+    0% {
+        transform: translate(-50%, 90vh);
+        width: 4px;
+        opacity: 1;
+    }
+    50% {
+        width: 4px;
+        opacity: 1;
+    }
+    100% {
+        width: 400px;
+        opacity: 0;
+    }
+}
+.c-firework,
+.c-firework::before,
+.c-firework::after {
+ content: "";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ aspect-ratio: 1;
+ background: radial-gradient(circle, #ff0 10px, #000 0) 50% 00%,
+  radial-gradient(circle, rgb(0, 106, 255) 10px, #000 0) 00% 50%,
+  radial-gradient(circle, #ff0 10px, #000 0) 50% 99%,
+  radial-gradient(circle, rgb(255, 153, 0) 10px, #000 0) 99% 50%,
+  radial-gradient(circle, rgb(255, 136, 0) 10px, #000 0) 80% 90%,
+  radial-gradient(circle, rgb(89, 0, 255) 10px, #000 0) 95% 90%,
+  radial-gradient(circle, #ff0 10px, #000 0) 10% 60%,
+  radial-gradient(circle, #7300ff 10px, #000 0) 31% 80%,
+  radial-gradient(circle, #ff0 10px, #000 0) 80% 10%,
+  radial-gradient(circle, #ff0 10px, #000 0) 90% 23%,
+  radial-gradient(circle, rgb(0, 255, 208) 10px, #000 0) 45% 20%,
+  radial-gradient(circle, #ff0 10px, #000 0) 13% 24%;
+ background-size: 4px 4px;
+ background-repeat: no-repeat;
+ transform: translate(-50%, -50%);
+ animation: fireworks-animation 4s infinite;
+}
+.c-firework::before {
+ transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+.c-firework::after {
+ transform: translate(-50%, -50%) rotate(-37deg) !important;
+} 
