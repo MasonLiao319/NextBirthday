@@ -14,7 +14,7 @@
        
         <input id="name" class="input" type="text" placeholder="What's your name?" required>
         
-        <input id="birthday" class="input" type="date" placeholder="What's your birthday?" required>
+        <input id="birthday" class="input" type="text" placeholder="When is your next birthday?" onfocus=" (this.type='date')" onblur="if (this.value=='') {this.type='text'}"required>
         
         <button id="submit" class="submit" type="submit">OK</button>
     </form>
