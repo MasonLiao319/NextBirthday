@@ -35,9 +35,9 @@ function submitForm() {
 
     // Update the output with the countdown information
     if(countDownDay === 1 || countDownDay === 0){
-        output.innerHTML = "🎆🎆Hello, " + name + "! There is only 1 day until your next birthday.🎆🎆";
+        output.innerHTML = "🎆🎆Hey! " + name + "! Only 1 day left.🎆🎆";
     }
-    else{output.innerHTML = "🎆Hello, " + name + "! There are " + countDownDay + " days until your next birthday.🎆";}
+    else{output.innerHTML = "🎆Hey! " + name + "! There are " + countDownDay + " days left.🎆";}
 
     // Display the fireworks animation
     document.getElementById('firework').style.display = 'block';
