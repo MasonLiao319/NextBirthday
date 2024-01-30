@@ -26,6 +26,20 @@
     <div id="firework" class="c-firework"></div>
 
     <script src="miniFnAge.js"></script>
-    
+    <script>
+        // Detect if the browser supports the date input type
+        var isDateInputSupported = function () {
+            var input = document.createElement('input');
+            input.setAttribute('type', 'date');
+            return input.type === 'date';
+        };
+
+        // If the date input type is not supported, replace it with a text input
+        if (!isDateInputSupported()) {
+            var dateInput = document.getElementById('birthday');
+            dateInput.type = 'text';
+            dateInput.placeholder = 'When is your next birthday? (YYYY-MM-DD)';
+        }
+    </script>
 </body>
 </html>
