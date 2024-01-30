@@ -25,16 +25,19 @@ function submitForm() {
     // Calculate the countdown
     let countDown = birthday - currentDate;
 
-    let countDownSec = Math.floor(countDown / 1000);
-    let countDownMin = Math.floor(countDownSec / 60);
-    let countDownhour = Math.floor(countDownMin / 60);
-    let countDownDay = Math.floor(countDownhour / 24);
+    let countDownSec = Math.round(countDown / 1000);
+    let countDownMin = Math.round(countDownSec / 60);
+    let countDownhour = Math.round(countDownMin / 60);
+    let countDownDay = Math.round(countDownhour / 24);
 
     // Get the output element
     let output = document.getElementById("output");
 
     // Update the output with the countdown information
-    output.innerHTML = "🎆Hello, " + name + "! There are " + countDownDay + " days until your next birthday.🎆";
+    if(countDownDay === 1){
+        output.innerHTML = "🎆🎆🎆Hello, " + name + "! There is only " + countDownDay + " day until your next birthday.🎆🎆🎆";
+    }
+    else{output.innerHTML = "🎆Hello, " + name + "! There are " + countDownDay + " days until your next birthday.🎆";}
 
     // Display the fireworks animation
     document.getElementById('firework').style.display = 'block';
