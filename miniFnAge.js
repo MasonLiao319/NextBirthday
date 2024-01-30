@@ -16,7 +16,7 @@ function submitForm() {
 
         // Display a warning message
         let output = document.getElementById("output");
-        output.innerHTML = "⚠️Please enter your next birthday, which is a date after today.";
+        output.innerHTML = "⚠️Please enter your next birthday, which is a date after current date.";
 
         // Prevent the form from submitting and refreshing the page
         return false;
@@ -34,8 +34,8 @@ function submitForm() {
     let output = document.getElementById("output");
 
     // Update the output with the countdown information
-    if(countDownDay === 1){
-        output.innerHTML = "🎆🎆🎆Hello, " + name + "! There is only " + countDownDay + " day until your next birthday.🎆🎆🎆";
+    if(countDownDay === 1 || countDownDay === 0){
+        output.innerHTML = "🎆🎆🎆Hello, " + name + "! There is only 1 day until your next birthday.🎆🎆🎆";
     }
     else{output.innerHTML = "🎆Hello, " + name + "! There are " + countDownDay + " days until your next birthday.🎆";}
 

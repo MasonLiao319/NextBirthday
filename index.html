@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Next Birthday</title>
+    <title>Countdown To Next Birthday</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Add the TinyDatePicker CSS file -->
-    <link rel="stylesheet" href="tiny-date-picker.min.css">
+ 
 </head>
 <body>
-    <h1>Next birthday calculator</h1>
+    <h1>Countdown To Next Birthday </h1>
     
     <!-- Create a form element for the user input -->
     <form id="form" onsubmit="return submitForm()">
-       
         <input id="name" class="input" type="text" placeholder="What's your name?" required>
         
-        <input id="birthday" class="input"  placeholder="When is your next birthday?" onfocus=" (this.type='date')" onblur="if (this.value=='') {this.type='text'}"required>
+        <!-- Add a label for the birthday input -->
+        <label for="birthday" class="label">When is your next birthday? (YYYY-MM-DD)</label>
+        <input id="birthday" class="input" type="date" required>
         
         <button id="submit" class="submit" type="submit">OK</button>
     </form>
@@ -28,29 +28,5 @@
     <div id="firework" class="c-firework"></div>
 
     <script src="miniFnAge.js"></script>
-    <!-- Add the TinyDatePicker and Modernizr JS files -->
-    <script src="tiny-date-picker.min.js"></script>
-    <script src="modernizr-custom.js"></script>
-    <script>
-        // Detect if the browser supports the date input type
-        var isDateInputSupported = function () {
-            var input = document.createElement('input');
-            input.setAttribute('type', 'date');
-            return input.type === 'date';
-        };
-
-        // If the date input type is not supported, replace it with a text input
-        if (!isDateInputSupported()) {
-            var dateInput = document.getElementById('birthday');
-            dateInput.type = 'text';
-            dateInput.placeholder = 'When is your next birthday? (YYYY-MM-DD)';
-        }
-
-        // If the date input type is not supported by Modernizr, use TinyDatePicker
-        if (!Modernizr.inputtypes.date) {
-            TinyDatePicker('#birthday');
-        }
-    </script>
 </body>
 </html>
-
